@@ -2272,6 +2272,11 @@ header .navBar ul li .clospall {
   z-index: 100;
   min-width: 180px;
 }
+@media (max-width: 667px) {
+  header .navBar ul li .clospall {
+    left: 0;
+  }
+}
 header .navBar ul li *:first-child {
   padding: 5px 8px;
 }

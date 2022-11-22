@@ -126,6 +126,11 @@ header {
           left: -100%;
           z-index: 100;
           min-width: 180px;
+          @media (max-width:667px) {
+            &{
+              left:0;
+            }
+          }
         }
 
         & *:first-child {
