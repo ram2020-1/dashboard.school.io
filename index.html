@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="src/css/dist/normalize.css" />
+    <link rel="stylesheet" href="src/css/dist/main.css" />
+    <!-- icons   -->
+    <script
+      src="https://kit.fontawesome.com/92c7a83d65.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="form-bg"></div>
+
+    <div class="form-body" id="login-form">
+      <div class="container">
+        <form action="teachers-all-teachers.html" class="main-form d-grid repeat-1 gap-20">
+          <div class="inputs-group d-grid repeat-2 gap-20">
+            <div class="input-group">
+              <label for="" class="c-black" >First Name</label>
+              <input type="text" class="form-control" required v-model="fName" />
+            </div>
+            <!-- end input group -->
+
+            <div class="input-group">
+              <label for="" class="c-black" >Last Name</label>
+              <input type="text" class="form-control" required  v-model="lName"/>
+            </div>
+            <!-- end input group -->
+          </div>
+          <!-- end inputs-group -->
+
+          <div class="input-group">
+            <label for="" class="c-black">Select Your Account for </label>
+            <select name="" id="" class="form-control" required>
+              <option value="teacher">Teacher</option>
+              <option value="parent">Parent</option>
+              <option value="student">Student</option>
+            </select>
+          </div>
+          <!-- end input-group -->
+
+          <div class="input-group">
+            <label for="" class="c-black">Enter Your Email</label>
+            <input type="email" name="" required id="" class="form-control" v-model="email" />
+          </div>
+
+          <div class="btn-container">
+            <button type="submit" class="main-btn" v-bind:disabled="!fName || !email || !lName">Login</button>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+
+    <!-- load animation -->
+    <div class="open-animetion" id="openAn">
+      <span>Loading</span>
+    </div>
+
+    <!-- end load animation -->
+
+    <!-- script src -->
+    <script src="src/js/vue.js"></script>
+    <script src="src/js/main.js"></script>
+    <script>
+      var validBtn = new Vue({
+        el: "#login-form",
+        data: {
+          fName: "",
+          lName:"",
+          email: "",
+
+        },
+        methods: {},
+      });
+    </script>
+  </body>
+</html>

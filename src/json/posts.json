@@ -1,0 +1,38 @@
+{
+  "dashbordPosts": {
+    "theDate": [
+      "10 , Jun , 2017 ",
+      "22 , Jun , 2016 ",
+      "25 , Jun , 2015 ",
+      "12 , Jun , 2014 ",
+      "1 , Jun , 2013 ",
+      "31 , Jun , 2011 "
+  ],
+  "theText":[
+    "greate School",
+    "greate School good service",
+    "greate School good food",
+    "greate School good teachers",
+    "greate School good veiw",
+    "greate School greate veiw"
+  ],
+  "theInfo": {
+    "name" : [
+      "moaz",
+      "moah",
+      "moaf",
+      "moae",
+      "moaw",
+      "moaq"
+    ],
+    "date" : [
+      "5 m ago",
+      "50 m ago",
+      "1 h ago",
+      "2 h ago",
+      "5 h ago",
+      "5 h ago"
+    ]
+  }
+  }
+}

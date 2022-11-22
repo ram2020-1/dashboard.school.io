@@ -1,0 +1,29 @@
+{
+  "messages": {
+    "id": [
+      1,
+      2,
+      3
+    ],
+    "senderName": [
+      "moaz",
+      "ans",
+      "mohamed"
+    ],
+    "messageText": [
+      "that's just a text for nothing just have fun win you sad",
+      "that's just a text for nothing just have fun win you sad",
+      "that's just a text for nothing just have fun win you sad"
+    ],
+    "messageDate": [
+      "18:00 Bm",
+      "12:00 am",
+      "10:00 bm"
+    ],
+    "imageSrc": [
+      "src/image/M3.png",
+      "src/image/M3.png",
+      "src/image/M3.png"
+    ]
+  }
+}

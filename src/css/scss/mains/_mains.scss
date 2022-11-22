@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+
+  h2 {
+    font-family: 'Ubuntu', sans-serif;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+[data-l] {
+  user-select: none;
+}
+
+button.btn.topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 16px;
+  background-color: var(--main-color);
+  color: var(--white);
+  z-index: 3000;
+  filter: saturate(0.5);
+  -webkit-filter: saturate(0.5);
+
+  &:hover {
+    filter: saturate(1);
+    -webkit-filter: saturate(1);
+  }
+}
+
+.main-btn {
+  border-radius: 5px;
+  display: block;
+  padding: 10px 22px;
+  font-size: 18px;
+  color: var(--white);
+  box-shadow: inset -12px -12px 0 5rem var(--main-color);
+  background: #252525;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  &:hover {
+    color: var(--white);
+    box-shadow: inset 6px 6px 0 0.01rem var(--main-color);
+
+  }
+
+  &[disabled] {
+    filter: grayscale(0.5);
+  }
+}
+
+.open-animetion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 33333333;
+  background: #fff;
+
+  span {
+    animation-name: loadAn;
+    position: relative;
+    border-radius: 50%;
+    z-index: 33333333;
+    margin: 0 2px;
+    background: var(--blue-w);
+    color: var(--white);
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    aspect-ratio: 1/1;
+    animation-duration: 1.5s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+
+}
+
+p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@for $i from 10 through 50 {
+  .font-size#{$i} {
+    font-size: #{$i}px;
+  }
+}
+
+@for $i from 1 through 50 {
+  .padding-#{$i} {
+    padding: #{$i}px;
+  }
+}
+
+@for $i from 1 through 9 {
+  .font-w#{$i * 100} {
+    font-weight: #{$i * 100};
+  }
+}
+
+.opacity-1 {
+  opacity: 1;
+}
+
+@for $i from 2 to 10 {
+  .opacity-#{$i} {
+    opacity: #{$i / 10};
+  }
+
+}
+
+$mains_class_color : "c-black" --main-font-color,
+"c-dark" --second-color,
+"c-white" --white,
+"c-main" --main-color,
+"c-red" --red,
+"c-green-blue" --green-blue,
+"c-blue" --blue,
+"c-sky" --blue-w;
+
+
+$mains_class_bg :"b-dark" --second-color,
+"b-main" --main-color,
+"b-black" --main-font-color,
+"b-dark" --second-color,
+"b-white" --white,
+"b-main-bg" --main-bg,
+"b-red" --red,
+"b-green-blue" --green-blue,
+"b-blue" --blue,
+"b-soft" --bg-soft,
+"b-sky" --blue-w;
+
+@each $name ,
+$color in $mains_class_bg {
+  .#{$name} {
+    background-color: var($color);
+  }
+}
+
+@each $name ,
+$color in $mains_class_color {
+  .#{$name} {
+    color: var($color);
+  }
+}
+
+$main-display: "d-flex" flex, "d-grid" grid, "block" block, "d-inline-block" inline-block;
+
+@each $name ,
+$property in $main-display {
+  .#{$name} {
+    display: $property;
+  }
+}
+
+$align-items : "align-center" center,
+"align-flex-start" flex-start,
+"align-start" start,
+"align-end" end,
+"align-baseline" baseline,
+"align-stretch" stretch;
+
+@each $name ,
+$property in $align-items {
+  .#{$name} {
+    align-items: $property;
+  }
+}
+
+$small-screen: "max-width:991px";
+$phone-screen: "max-width:767px";
+
+$grid-repeat: "repeat-1" repeat(1, 1fr),
+  "repeat-2" repeat(2, 1fr),
+  "repeat-3" repeat(3, 1fr),
+  "repeat-4" repeat(4, 1fr),
+;
+
+@each $name ,
+$property in $grid-repeat {
+  .#{$name} {
+    grid-template-columns: $property;
+  }
+}
+
+@media (#{$small-screen}) {
+
+  .repeat-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repeat-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repeat-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (#{$phone-screen}) {
+
+  .repeat-2 {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .repeat-3 {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+  .repeat-4 {
+    grid-template-columns: repeat(1, 1fr);
+
+  }
+
+}
+
+@for $i from 1 through 100 {
+  .width-#{$i}h {
+    width: #{100% * $i / 100};
+  }
+
+  .padding-#{$i} {
+    padding: #{$i}px;
+  }
+
+  .gap-#{$i} {
+    gap: #{$i}px;
+  }
+}
+
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.d-flex.row {
+  flex-direction: row;
+}
+
+.d-flex.column {
+  flex-direction: column;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding:16px 5px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--main-font-color);
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.25rem #ff870266;
+    border-color: #ff8902a5;
+  }
+}
+
+.clospall {
+  overflow: hidden;
+}
+
+.card.bx-shadow {
+  box-shadow: var(--mian-bx-shadow);
+}
+
+/*colorize-ic-card*/
+.colorize-ic-card {
+  .card {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    i {
+      font-size: 22px;
+      padding: 20px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+    }
+
+
+
+  }
+}
+
+/*end colorize-ic-card*/
+
+.main-add-form {
+
+  input,
+  select,
+  textarea {
+    background-color: #f0f1f3;
+    color: var(--dark) #000;
+    border: 0;
+
+    &:focus {
+      box-shadow: 0 0 0 0.15rem rgb(151 151 151 / 40%);
+    }
+  }
+}
+
+/*end main-form*/

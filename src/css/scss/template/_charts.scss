@@ -1,0 +1,107 @@
+#dashBord-admin-PaiChart {
+  max-width: 200px;
+  max-height: 200px;
+  margin-inline: auto;
+}
+
+.naitv-paiChart-card {
+
+  .naitv-paiChart {
+    .par {
+      width: 100%;
+      height: 15px;
+      border-radius: 20px;
+      -webkit-border-radius: 20px;
+      -moz-border-radius: 20px;
+      -ms-border-radius: 20px;
+      -o-border-radius: 20px;
+      background-color: cornflowerblue;
+      overflow: hidden;
+    }
+
+    span {
+      height: 100%;
+      display: inline-block;
+    }
+
+
+  }
+
+  .naitv-paiChart-content {
+    display: grid;
+    padding: 20px 0;
+    gap: 10px;
+
+    .d-flex {
+      justify-content: space-between;
+      padding: 10px 0;
+      align-items: center;
+
+      &:not(:last-child) {
+        border-bottom: 1px dotted var(--main-font-color);
+      }
+
+      div {
+        color: var(--second-color);
+        font-weight: 500;
+
+        span {
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          border: 2px solid var(--white);
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+          box-shadow: -1px 5px 4px 0px rgb(0 0 0 / 21%);
+        }
+      }
+    }
+  }
+}
+
+
+.dashBord-students-paiChart{
+  canvas{
+      max-width: 200px;
+      max-height: 200px;
+      margin-inline: auto;
+      
+    }
+  }
+  .main-pai-chart-card{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    .card-container{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .main-paiChart-css{
+  max-width: 200px;
+  max-height: 200px;
+  margin-inline: auto;
+  min-height: 200px;
+  min-width:200px ;
+}
+
+.form-parent{
+  button{
+    padding: 10px;
+    border-radius:5px;
+    margin: 10px;
+    background: #ffc107;
+    color: var(--white);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+}
+}

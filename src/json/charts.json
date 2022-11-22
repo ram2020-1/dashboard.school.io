@@ -1,0 +1,56 @@
+{
+  "paiChartOption": {
+    "labels": [
+      "males student",
+      "female student"
+    ],
+    "data": [
+      1500,
+      500
+    ],
+    "backgroundColor": [
+      "#ffc107",
+      "#03a9f4"
+    ]
+  },
+  "naitvPaiChart": {
+    "spans": [
+      "30%",
+      "20%",
+      "40%",
+      "10%"
+    ],
+    "colors": [
+      "#e91e63",
+      "#ff5722",
+      "#ffeb3b",
+      "#8bc34a"
+    ],
+    "titles": [
+      "Dicert",
+      "Search",
+      "Referrals",
+      "social"
+    ],
+    "numbers": [
+      "12,890",
+      "4,566",
+      "2,355",
+      "203"
+    ]
+  },
+  "DashBordStudentsPagePaiChart": {
+    "labels": [
+      "Present",
+      "Absend"
+    ],
+    "data": [
+      1500,
+      500
+    ],
+    "backgroundColor": [
+      "#ffc107",
+      "#03a9f4"
+    ]
+  }
+}
