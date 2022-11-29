@@ -686,6 +686,26 @@ p {
   align-items: stretch;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-baseline {
+  justify-content: baseline;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: end;
+}
+
 .repeat-1 {
   grid-template-columns: repeat(1, 1fr);
 }
@@ -2744,5 +2764,13 @@ header #msg-pest .msg .text p {
 }
 
 /* end content side */
+@media print {
+  body *:not(#print-true):not(#print-true *) {
+    visibility: hidden;
+  }
+  #print-true {
+    visibility: visible;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

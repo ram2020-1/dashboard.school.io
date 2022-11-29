@@ -377,17 +377,27 @@
               <span class="addres">
                 <p class="">Home</p>
                 <i>/</i>
-                <p>{page name}</p>
+                <p>Student Ditals</p>
               </span>
             </div>
             <!-- end top title -->
             <div class="content-spaces">
               <!-- start card-info -->
-              <div class="card-info card b-white bx-shadow padding-20 style2">
-                <div class="top-title">
+              <div class="card-info card b-white bx-shadow padding-20 style2" id="print-true">
+                <div class="top-title d-flex row gap-20 wrap justify-space-between">
                   <h2 class="c-dark">About me</h2>
+                    <div class="btn-container d-flex row wrap gap-20">
 
+                      <button onclick="window.print()" class="btn c-black padding-5" id="printBtn"><i class="fa-solid fa-print"></i></button>
+                      <!-- end print-btn -->
+                      <a href="students-students-form.html" class=" padding-5 c-black"><i class="fa-solid fa-pen-to-square"></i></a>
+                      <!-- end edit ditals -->
+                      <a href="#" class="c-black padding-5" download><i class="fa-solid fa-file-arrow-down"></i></a>
+                      <!-- end download-btn -->
+                    </div>
+                    <!-- end btns container -->
                 </div>
+                <!-- end top-title  -->
                 <div class="top-content d-flex row wrap gap-20">
 
                   <div class="img-container">

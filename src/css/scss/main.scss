@@ -275,3 +275,12 @@
 }
 
 /* end content side */
+
+@media print{
+  body *:not(#print-true):not(#print-true *){
+    visibility: hidden;
+  }
+  #print-true{
+    visibility:visible;
+  }
+}

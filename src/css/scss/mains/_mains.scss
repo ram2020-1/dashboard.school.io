@@ -210,6 +210,20 @@ $property in $align-items {
   }
 }
 
+$justify-content : "justify-center" center,
+"justify-space-between"space-between,
+"justify-baseline" baseline,
+"justify-start" start,
+"justify-end" end
+;
+
+@each $name ,
+$property in $justify-content {
+  .#{$name} {
+    justify-content: $property;
+  }
+}
+
 $small-screen: "max-width:991px";
 $phone-screen: "max-width:767px";
 
