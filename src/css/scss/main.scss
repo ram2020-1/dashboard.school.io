@@ -275,6 +275,30 @@
 }
 
 /* end content side */
+.prev-next-container {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  button{
+    padding: 10px;
+    background: #ffc107;
+    margin: 10px;
+  }
+  .numbers-continer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+}
 
 @media print{
   body *:not(#print-true):not(#print-true *){
@@ -282,5 +306,9 @@
   }
   #print-true{
     visibility:visible;
+  }
+  .phide{
+    
+    visibility: hidden;
   }
 }

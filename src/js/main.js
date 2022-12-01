@@ -221,86 +221,6 @@ if(toggleLeftNav != null){
   })
 }
 
-var tableSections =document.querySelectorAll(".table-section");
-if(tableSections.length > 0){
-  // for(var i = 0 ; i < tableSections.length; i++){
-  // }
-  let items = document.querySelectorAll(".table-section tbody tr");
-  var iL = items.length;
-  let jsp_current_page = 1;
-const jsp_records_per_page = 2;
-
-let js_items = [];
-for (var index = 0; index < items.length;index++){
-js_items.push(items[index].outerHTML);
-}
-console.log(js_items);
-function jsp_num_pages() {
-  return Math.ceil(js_items.length / jsp_records_per_page);
-}
-
-function jsp_prev_page() {
-  if (jsp_current_page > 1) {
-      jsp_current_page--;
-      jsp_change_page(jsp_current_page);
-  }
-}
-
-function jsp_next_page() {
-  if (jsp_current_page < jsp_num_pages()) {
-      jsp_current_page++;
-      jsp_change_page(jsp_current_page);
-  }
-}
-
-function jsp_change_page(page) {
-  const btn_prev = document.getElementById('btn-prev');
-  const btn_next = document.getElementById('btn-next');
-  const listing_table = document.getElementById('listing-table');
-  let page_span = document.getElementById('page');
-
-  if (page < 1) {
-      page = 1;
-  }
-  if (page > jsp_num_pages()) {
-      page = jsp_num_pages();
-  }
-
-  // listing_table.innerHTML = '';
-  for (var ii = 0 ; ii < items.length; ii++){
-    items[ii].style.display="none";
-
-  }
-  for (let i = (page - 1) * jsp_records_per_page; i < (page * jsp_records_per_page) && i < js_items.length; i++) {
-    items[i].style.display="block";
-      // listing_table.innerHTML += `${js_items[i]}`;
-  }
-  page_span.innerHTML = `${page}/${jsp_num_pages()}`;
-
-  btn_prev.style.display = (page === 1) ? 'none' : 'inline-block';
-  btn_next.style.display = (page === jsp_num_pages()) ? 'none' : 'inline-block';
-}
-
-window.onload = () => {
-  document.getElementById('btn-prev').addEventListener('click', (e) => {
-      e.preventDefault();
-      jsp_prev_page();
-  });
-
-  document.getElementById('btn-next').addEventListener('click', (e) => {
-      e.preventDefault();
-      jsp_next_page();
-  });
-
-};
-jsp_change_page(1);
-
-while(iL != items.length){
-console.log("e");
-iL = items.length;
-}
-}
-
 let dycalender =document.getElementById("dycalender");
 if(dycalender != null){
   dycalendar.draw({
@@ -321,3 +241,13 @@ if(link.href.includes(`${activePage}`)){
     console.log(link);
 }
 })
+
+var tOp = {
+  data:[
+    "one",
+    "two",
+    "three",
+    "four"
+  ]
+}
+console.log(tOp.data[1])
