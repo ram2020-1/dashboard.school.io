@@ -722,26 +722,123 @@ p {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.f-b100 {
+  flex-basis: calc(100% - 20px);
+}
+
+.f-b75 {
+  flex-basis: calc(75% - 20px);
+}
+
+.f-b50 {
+  flex-basis: calc(50% - 20px);
+}
+
+.f-b33 {
+  flex-basis: calc(33.33% - 20px);
+}
+
+.f-b25 {
+  flex-basis: calc(25% - 20px);
+}
+
+@media (max-width:1200px) {
+  .repeat-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repeat-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repeat-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .f-b100 {
+    flex-basis: calc(100% - 20px);
+  }
+
+  .f-b75 {
+    flex-basis: calc(75% - 20px);
+  }
+
+  .f-b50 {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .f-b33 {
+    flex-basis: calc(33.33% - 20px);
+  }
+
+  .f-b25 {
+    flex-basis: calc(33.33% - 20px);
+  }
+}
 @media (max-width:991px) {
   .repeat-2 {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .repeat-3 {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .repeat-4 {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .f-b100 {
+    flex-basis: calc(100% - 20px);
+  }
+
+  .f-b75 {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .f-b50 {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .f-b33 {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .f-b25 {
+    flex-basis: calc(50% - 20px);
   }
 }
 @media (max-width:767px) {
   .repeat-2 {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .repeat-3 {
     grid-template-columns: repeat(1, 1fr);
   }
+
   .repeat-4 {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .f-b100 {
+    flex-basis: 100%;
+  }
+
+  .f-b75 {
+    flex-basis: 100%;
+  }
+
+  .f-b50 {
+    flex-basis: 100%;
+  }
+
+  .f-b33 {
+    flex-basis: 100%;
+  }
+
+  .f-b25 {
+    flex-basis: 100%;
   }
 }
 .width-1h {
@@ -2661,7 +2758,7 @@ header #msg-pest .msg .text p {
   gap: 10px;
 }
 .content-side .block .content-contents .card {
-  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.034);
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -2790,9 +2887,11 @@ header #msg-pest .msg .text p {
   body *:not(#print-true):not(#print-true *) {
     visibility: hidden;
   }
+
   #print-true {
     visibility: visible;
   }
+
   .phide {
     visibility: hidden;
   }

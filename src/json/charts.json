@@ -1,16 +1,88 @@
 {
-  "paiChartOption": {
+  "mixid_chart": {
+    "first_line": {
+      "label": "Bar Dataset",
+      "data": [
+        10,
+        20,
+        30,
+        40
+      ]
+    },
+    "second_line": {
+      "label": "Line Dataset",
+      "data": [
+        50,
+        44,
+        260,
+        0
+      ]
+    },
+    "labels": [
+      "January",
+      "February",
+      "March",
+      "April"
+    ]
+  },
+  "bar_chart": {
+    "label": "# of votes",
+    "data": [
+      12000,
+      1234,
+      8288
+    ],
+    "backgroundColor": [
+      "#3d3d",
+      "#3d3d",
+      "#3d3d"
+    ],
+    "labels": [
+      "Red",
+      "blue",
+      "Yellow"
+    ]
+  },
+  "admin_student_gender_PaiChart": {
     "labels": [
       "males student",
       "female student"
     ],
     "data": [
       1500,
-      500
+      700
     ],
     "backgroundColor": [
       "#ffc107",
       "#03a9f4"
+    ]
+  },
+  "student_student_gender_PaiChart": {
+    "labels": [
+      "males student",
+      "female student"
+    ],
+    "data": [
+      1500,
+      1000
+    ],
+    "backgroundColor": [
+      "#ffc107",
+      "#03a9f4"
+    ]
+  },
+  "techer_student_gender_PaiChart": {
+    "labels": [
+      "males student",
+      "female student"
+    ],
+    "data": [
+      900,
+      1100
+    ],
+    "backgroundColor": [
+      "#ffc107",
+      "red"
     ]
   },
   "naitvPaiChart": {

@@ -226,6 +226,7 @@ $property in $justify-content {
 
 $small-screen: "max-width:991px";
 $phone-screen: "max-width:767px";
+$normal-pc-screen: "max-width:1200px";
 
 $grid-repeat: "repeat-1" repeat(1, 1fr),
   "repeat-2" repeat(2, 1fr),
@@ -238,6 +239,55 @@ $property in $grid-repeat {
   .#{$name} {
     grid-template-columns: $property;
   }
+}
+
+.f-b100{
+  flex-basis: calc(100% - 20px);
+}
+.f-b75{
+  flex-basis: calc(75% - 20px);
+}
+.f-b50{
+  flex-basis: calc(50% - 20px);
+}
+.f-b33{
+  flex-basis: calc(33.33% - 20px) ;
+}
+.f-b25{
+  flex-basis: calc(25% - 20px);
+}
+
+@media (#{$normal-pc-screen}) {
+
+  .repeat-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repeat-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .repeat-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  
+.f-b100{
+  flex-basis: calc( 100% - 20px);
+}
+.f-b75{
+  flex-basis: calc(75% - 20px ) ;
+}
+.f-b50{
+  flex-basis: calc( 50% - 20px );
+}
+.f-b33{
+  flex-basis:calc( 33.33% - 20px );
+}
+.f-b25{
+  flex-basis:calc( 33.33% - 20px );
+}
+
 }
 
 @media (#{$small-screen}) {
@@ -253,6 +303,23 @@ $property in $grid-repeat {
   .repeat-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+.f-b100{
+  flex-basis:calc( 100% - 20px );
+}
+.f-b75{
+  flex-basis:calc( 50% - 20px );
+}
+.f-b50{
+  flex-basis:calc( 50% - 20px);
+}
+.f-b33{
+  flex-basis:calc( 50% - 20px);
+}
+.f-b25{
+  flex-basis:calc( 50% - 20px );
+}
+
 
 }
 
@@ -272,6 +339,23 @@ $property in $grid-repeat {
     grid-template-columns: repeat(1, 1fr);
 
   }
+  
+.f-b100{
+  flex-basis: 100%;
+}
+.f-b75{
+  flex-basis: 100%;
+}
+.f-b50{
+  flex-basis: 100%;
+}
+.f-b33{
+  flex-basis: 100%;
+}
+.f-b25{
+  flex-basis: 100%;
+}
+
 
 }
 

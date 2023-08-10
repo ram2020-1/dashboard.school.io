@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- css files -->
+    <link rel="stylesheet" href="src/css/dist/normalize.css" />
+    <link rel="stylesheet" href="src/css/dist/dycalendar.css" />
+    <link rel="stylesheet" href="src/css/dist/main.css" />
+    <!-- icons   -->
+    <script src="https://kit.fontawesome.com/6a464a22a0.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="main-app" id="main-app">
+        <div class="">
+
+            <div class="right-side">
+                <header>
+                    <div class="container">
+                        <nav class="navBar">
+                            <ul class="links">
+                                <li class="search">
+                                    <form action="" method="get">
+                                        <div class="input-group">
+                                            <input type="search" class="form-control" placeholder="search....." />
+                                            <button class="btn" type="submit">
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+
+                                            </button>
+                                            <!-- end btn-search -->
+                                        </div>
+                                        <!-- end search -->
+                                    </form>
+                                </li>
+
+                                <!-- end search li -->
+                                <div class="navs">
+                                    <li>
+                                        <button class="btn profile" @click="getUserInf">
+                                            <span>
+                                                <p class="user-name">{{ userName }}</p>
+                                                <p class="validity">{{ validity }}</p>
+                                            </span>
+
+                                            <img v-bind:src="profileImage" width="50px" class="profile-img" alt="" />
+                                            <!-- profile img -->
+                                        </button>
+
+                                        <div class="profile-list clospall b-white">
+                                            <div class="clospall-container">
+                                                <div class="top-title">
+                                                    <p>{{ userName }} Zone</p>
+                                                </div>
+                                                <ul>
+                                                    <li><button class="btn">Profile</button></li>
+                                                    <li><button class="btn">Message</button></li>
+                                                    <li>
+                                                        <button class="btn">Accound Setings</button>
+                                                    </li>
+                                                    <li><button class="btn">Log Out</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- end li -->
+
+                                    <li>
+                                        <button class="btn message">
+                                            Message
+                                            <span class="c-white b-green-blue abs">{{message.mLength}}</span>
+                                        </button>
+                                        <div class="message-list clospall">
+                                            <div class="clospall-container">
+                                                <div class="top-card padding-10 b-green-blue" id="message-container">
+                                                    <h2 class="c-white">{{message.mLength}} Message</h2>
+                                                </div>
+
+                                                <div class="card-content" id="msg-pest"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- end li -->
+
+                                    <li>
+                                        <button class="btn notifiacations">
+                                            Notifiacations
+                                            <span class="c-white b-red abs">{{notifications.nLength}}</span>
+                                        </button>
+
+                                        <div class="notifiacations-list clospall">
+                                            <div class="clospall-container">
+                                                <div class="top-card padding-10 b-red" id="message-container">
+                                                    <h2 class="c-white">
+                                                        {{notifications.nLength}} Notififcation
+                                                    </h2>
+                                                </div>
+
+                                                <div class="card-content b-white" id="">
+                                                    <div class="posts-card">
+                                                        <div class="card-container">
+
+                                                        </div>
+                                                    </div>
+                                                    <!-- end post card -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <!-- end li -->
+
+                                    <li>
+                                        <select name="" id="lang">
+                                            <option value="en">En</option>
+                                            <option value="fn">Fn</option>
+                                            <option value="ar">Ar</option>
+                                        </select>
+                                    </li>
+                                </div>
+                            </ul>
+                        </nav>
+                        <!-- end nav bar -->
+                        <button class="btn toggle" id="toggleBtn">
+                            <i class="fa-solid fa-angles-down"></i>
+                        </button>
+
+                        <button class="btn" id="left-side-op"> <i class="fa-solid fa-bars"></i>
+                        </button>
+
+
+                        <!-- end search button -->
+                    </div>
+                </header>
+                <!-- end header -->
+
+                <div class="content-side b-soft">
+                    <div id="dash-bord-admin" class="block ">
+                        <div class="top-title">
+                            <h2>Admin DashBord</h2>
+                            <span class="addres">
+                                <p>Home</p>
+                                <i>/</i>
+                                <p>Admin Page</p>
+                            </span>
+                        </div>
+                        <!-- end top title -->
+
+                        <!-- start the main content -->
+
+                        <div class="content-contents d-flex justify-center wrap" >
+                            <div class="d-flex wrap  gap-20 colorize-ic-card justify-center f-b100">
+                                <div class="card f-b25">
+                                    <i class="fa-solid fa-restroom" style=" color: #3cb878;
+                  background: #dbfaea;"></i>
+                                    <div>
+                                        <p class="c-black">Students</p>
+                                        <span class="value">151</span>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+
+                                <div class="card f-b25">
+                                    <i class="fa-solid fa-people-group" style="color: #3f7afc;
+                  background: #dbe9fa;"></i>
+                                    <div>
+                                        <p class="c-black">Teachers</p>
+                                        <span class="value">151</span>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+
+                                <div class="card f-b25">
+                                    <i class="fa-solid fa-user-group" style="color: #ffa001;
+                  background: #faf0db;"></i>
+                                    <div>
+                                        <p class="c-black">Parents</p>
+                                        <span class="value">151</span>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+
+                                <div class="card f-b25">
+                                    <i class="fa-solid fa-money-bill-wave" style="color: #ff0000;
+                  background: #fadbdb;"></i>
+                                    <div>
+                                        <p class="c-black">Earning</p>
+                                        <span class="value">151</span>
+                                    </div>
+                                </div>
+                                <!-- end card -->
+                            </div>
+                            <!-- end grid -->
+
+                                <div class="mixid-chart card b-white f-b50">
+
+                                    <div class="card-container">
+
+                                        <canvas id="DALC"></canvas>
+                                        <!-- for the two line chart -->
+                                    </div>
+                                    <!-- end card container -->
+                                </div>
+                                <!-- end card -->
+                                <div class="bar-chart card b-white bx-shadow f-b25">
+                                    <div class="card-container">
+                                        <canvas id="DABC" class=""></canvas>
+                                        <!-- the bar chart -->
+                                    </div>
+                                    <!--  end card container-->
+                                </div>
+                                <!--  end card-->
+                                <!-- start card -->
+
+                                <div class="card b-white bia-container main-pai-chart-card f-b25">
+                                    <div class="card-container">
+                                        <canvas id="admin-student-gender-PaiChart" data-chart="student-paiChart"
+                                            class="main-paiChart-css"></canvas>
+                                        <!----- pai for count male and female ----->
+
+                                    </div>
+                                    <!-- end card container -->
+                                </div>
+
+                                <!-- end card -->
+                            <!-- end d-grid -->
+
+                            <!-- start grid 2 charts  -->
+
+                                <!-- start card -->
+
+                                <div class="card b-white">
+                                    <div class="card-container">
+                                        <div class="content" id="dycalender">
+
+                                        </div>
+                                    </div>
+                                    <!-- end card-container -->
+                                </div>
+
+                                <!-- end card -->
+
+                                <!-- start card -->
+
+                                <div class="card b-white">
+                                    <div class="card-container naitv-paiChart-card">
+                                        <div class="naitv-paiChart" id="D-NPC">
+                                            <div class="par"></div>
+                                        </div>
+
+                                        <div class="d-grid naitv-paiChart-content"></div>
+                                    </div>
+                                </div>
+
+                                <!-- end card -->
+
+                                <!-- start card  posts -->
+                                <div class="card b-white posts-card">
+                                    <div class="card-container"></div>
+                                </div>
+                                <!-- end card  posts -->
+                            </div>
+                            <!-- end grid 2 charts  -->
+
+                            <!-- start grid social -->
+                            <div class="grid-social d-grid repeat-4 gap-20">
+
+                                <div class="card facebook padding-10" style="background: #546ca9;">
+                                    <a href="#" class="c-white d-flex gap-10 column" style="text-align: center;">
+                                        <div class="top-card">
+                                            <i class="fa-brands fa-facebook c-white"></i>
+                                            <p class="c-white">Like In FaceBook</p>
+                                        </div>
+
+                                        <div class="content">30,000</div>
+                                    </a>
+                                </div>
+
+                                <!-- end faceBook card -->
+
+                                <div class="card twitter padding-10" style="background: #45a0f0;">
+                                    <a href="#" class="c-white d-flex gap-10 column" style="text-align: center;">
+                                        <div class="top-card">
+                                            <i class="fa-brands fa-twitter c-white"></i>
+                                            <p class="c-white">Subscribe In Twitter</p>
+                                        </div>
+
+                                        <div class="content">40,000</div>
+                                    </a>
+                                </div>
+
+                                <!-- end twitter card -->
+
+                                <div class="card instgram padding-10" style="background: #e91e63;">
+                                    <a href="#" class="c-white d-flex gap-10 column" style="text-align: center;">
+                                        <div class="top-card">
+                                            <i class="fa-brands fa-instagram c-white"></i>
+                                            <p class="c-white">Subscribe In Instagram</p>
+                                        </div>
+
+                                        <div class="content">40,000</div>
+                                    </a>
+                                </div>
+
+
+                                <!-- end instgram card -->
+                                <div class="card linkedin padding-10" style="background: #1565c0;">
+                                    <a href="#" class="c-white d-flex gap-10 column" style="text-align: center;">
+                                        <div class="top-card">
+                                            <i class="fa-brands fa-linkedin c-white"></i>
+                                            <p class="c-white">Subscribe In Linkedin</p>
+                                        </div>
+
+                                        <div class="content">40</div>
+                                    </a>
+                                </div>
+                                <!-- end linkedin card -->
+
+
+                            </div>
+
+                            <!-- end grid social -->
+                        </div>
+
+                        <!-- end the main content -->
+                    <!-- end block dash-bord-admin -->
+
+                </div>
+                <!-- end content-side -->
+            </div>
+            <!-- end right-side -->
+        </div>
+    </div>
+    <!-- end main app -->
+
+    <!-- load animation -->
+    <div class="open-animetion" id="openAn">
+        <span>Loading</span>
+    </div>
+
+    <!-- end load animation -->
+
+    <!-- script src -->
+    <script src="src/js/vue.js"></script>
+    <!-- <script src="src/js/jquery-3.6.0.js"></script> -->
+
+    <script src="src/js/chart.min.js"></script>
+    <script src="src/js/dycalendar.js"></script>
+    <script src="src/js/main.js"></script>
+    <script src="src/js/charts.js"></script>
+
+</body>
+
+</html>
